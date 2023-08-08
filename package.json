@@ -1,0 +1,56 @@
+{
+  "name": "cypress-should",
+  "version": "0.0.1",
+  "description": "Supercool assertion library for Cypress",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "./index.js",
+    "./index.d.ts"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run lint && npm run format:check && npm run test",
+    "lint": "eslint --ext .js **/*.js",
+    "format": "prettier --config .prettierrc '**/*.js' --write",
+    "format:check": "prettier --config .prettierrc '**/*.js' --check",
+    "start": "node server.js",
+    "cy:run": "npx cypress run",
+    "cy:open": "npx cypress open",
+    "test": "start-server-and-test start http://localhost:3000 cy:run",
+    "release": "release-it --github.release",
+    "release:ci": "npm run release -- --ci --npm.skipChecks --no-git.requireCleanWorkingDir",
+    "release:patch": "npm run release -- patch",
+    "release:minor": "npm run release -- minor",
+    "release:major": "npm run release -- major"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elaichenkov/cypress-should.git"
+  },
+  "keywords": [
+    "cypress",
+    "assertion",
+    "testing",
+    "api",
+    "chai",
+    "expect",
+    "e2e"
+  ],
+  "author": "Yevhen Laichenkov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elaichenkov/cypress-should/issues"
+  },
+  "homepage": "https://github.com/elaichenkov/cypress-should#readme",
+  "devDependencies": {
+    "cypress": "^12.17.2",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-cypress": "^2.13.3",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.1",
+    "release-it": "^16.1.3",
+    "start-server-and-test": "^2.0.0"
+  }
+}
