@@ -209,13 +209,6 @@ chai.use(({ Assertion }) => {
       },
     ],
     [
-      'text',
-      function toBeText() {
-        const actualContentType = this._obj.headers['content-type'];
-        assert(actualContentType).to.eq('text/plain');
-      },
-    ],
-    [
       'javascript',
       function toBeJavascript() {
         const actualContentType = this._obj.headers['content-type'];

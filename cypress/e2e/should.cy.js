@@ -22,7 +22,6 @@ describe('assertions', () => {
   it('should have header key', () => cy.request('/demo').should('have.header', 'content-type'));
   it('should have header key & value', () => cy.request('/demo').should('have.header', 'content-type', 'text/html'));
   it('should have content type', () => cy.request('/demo').should('have.contentType', 'text/html'));
-  it('should be text', () => cy.request('/text').should('be.text'));
   it('should be html', () => cy.request('/demo').should('be.html'));
   it('should be json', () => cy.request('/data/object').should('be.json'));
   it('should be xml', () => cy.request('/xml').should('be.xml'));
