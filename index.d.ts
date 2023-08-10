@@ -382,19 +382,6 @@ declare namespace Cypress {
     (chainer: 'be.xml'): Chainable<Subject>;
 
     /**
-     * Custom Chai assertion that checks that the response content type is equal to text content type
-     * @example
-     * ```
-     * cy.request('/users').should('be.text');
-     * or
-     * cy.request('/users').should((response) => {
-     *  expect(response).to.be.text;
-     * });
-     * ```
-     * */
-    (chainer: 'be.text'): Chainable<Subject>;
-
-    /**
      * Custom Chai assertion that checks that the response cookies contain given cookie
      * @example
      * ```
