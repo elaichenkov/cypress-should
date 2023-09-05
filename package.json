@@ -43,7 +43,7 @@
   },
   "homepage": "https://github.com/elaichenkov/cypress-should#readme",
   "devDependencies": {
-    "cypress": "^12.17.2",
+    "cypress": "^13.1.0",
     "eslint": "^8.46.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-chai-friendly": "^0.7.2",
